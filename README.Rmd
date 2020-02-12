@@ -58,4 +58,4 @@ ggplot(
 
 ```
 
-![Example figure with ntnupal theming](example.png)
+![Example figure with ntnupal theming](man/figures/example.png)

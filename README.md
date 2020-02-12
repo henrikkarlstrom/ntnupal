@@ -44,4 +44,4 @@ ggplot(
   scale_fill_ntnu("cool")
 ```
 
-![Example figure with ntnupal theming](example.png)
+![Example figure with ntnupal theming](man/figures/example.png)
