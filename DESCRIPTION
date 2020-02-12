@@ -1,5 +1,5 @@
 Package: ntnupal
-Title: Official NTNU palette for graphics
+Title: Official NTNU palette and theme for graphics
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Henrik",
@@ -7,8 +7,10 @@ Authors@R:
            role = c("aut", "cre"),
            email = "henrik.karlstrom@ntnu.no",
            comment = c(ORCID = "0000-0002-9942-4326"))
-Description: Defines a set of colours for use in graphing based on the official colour palette of the Norwegian University of Science and Technology.
+Description: This package does two things: 1) Defines a set of colours for use in graphing based on the official colour palette of the Norwegian University of Science and Technology. 2) Specifies a standard theme for NTNU graphics.
+Imports:
+  ggplot2
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2

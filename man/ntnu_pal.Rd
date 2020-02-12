@@ -11,14 +11,13 @@ ntnu_pal(palette = "main", reverse = FALSE, ...)
 
 \item{reverse}{If TRUE, reverses colour direction}
 
-\item{...}{}
+\item{...}{Additional arguments}
 }
 \description{
 NTNU palette with ramped colours
 }
 \examples{
-library(scales)
-show_col(ntnu_pal()(10))
-
-filled.contour(volcano, color.palette = ntnu_pal(), asp = 1)
+\dontrun{
+ ntnu_pal()
+}
 }

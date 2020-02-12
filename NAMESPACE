@@ -3,3 +3,4 @@
 export(ntnu_pal)
 export(scale_color_ntnu)
 export(scale_fill_ntnu)
+export(theme_ntnu)

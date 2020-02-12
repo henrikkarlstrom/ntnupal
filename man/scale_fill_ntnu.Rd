@@ -4,18 +4,22 @@
 \alias{scale_fill_ntnu}
 \title{Setup fill palette for ggplot2}
 \usage{
-scale_fill_ntnu(palette = "main", discrete = TRUE, reverse = FALSE,
-  ...)
+scale_fill_ntnu(palette = "main", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
-\item{palette}{}
+\item{palette}{Palette to apply}
 
-\item{discrete}{}
+\item{discrete}{Whether the scale is continuous or discrete}
 
-\item{reverse}{}
+\item{reverse}{Whether the palette should be reversed}
 
-\item{...}{}
+\item{...}{Additional arguments}
 }
 \description{
 Setup fill palette for ggplot2
+}
+\examples{
+\dontrun{
+scale_fill_ntnu()
+}
 }

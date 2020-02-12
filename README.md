@@ -5,18 +5,12 @@ ntnupal
 
 <!-- badges: start -->
 <!-- badges: end -->
-The goal of ntnupal is to ...
+ntnupal provides two things: 1. A consistent NTNU theme to ggplots 2. A colour scheme based on the official colours of NTNU
 
 Installation
 ------------
 
-You can install the released version of ntnupal from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("ntnupal")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -26,30 +20,28 @@ devtools::install_github("henrikkarlstrom/ntnupal")
 Example
 -------
 
-This is a basic example which shows you how to solve a common problem:
+Simply add `theme_ntnu()` and `scale_fill_ntnu()` or `scale_color_ntnu()` at the end of your plot:
 
 ``` r
 library(ntnupal)
-## basic example code
+library(ggplot2)
+
+ggplot(
+  data = iris, 
+  aes(x = Sepal.Width)
+  ) + 
+  geom_histogram(
+    aes(fill = Species), 
+    binwidth = 0.2, 
+    color = "black") + 
+  geom_hline(
+    yintercept = 0, 
+    size = 1, 
+    color = "#333333") + 
+  theme_ntnu() + 
+  labs(
+    title = "Distribution of sepal widths by species") + 
+  scale_fill_ntnu("cool")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+![Example figure with ntnupal theming](example.png)

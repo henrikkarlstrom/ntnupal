@@ -6,9 +6,9 @@
 #' @export
 #'
 #' @examples
-#' line <- ggplot(line_df, aes(x = year, y = lifeExp)) +
-#' geom_line(colour = "#007f7f", size = 1) +
-#' geom_hline(yintercept = 0, size = 1, colour="#333333") +
+#' line <- ggplot2::ggplot(line_df, aes(x = year, y = lifeExp)) +
+#' ggplot2::geom_line(colour = "#007f7f", size = 1) +
+#' ggplot2::geom_hline(yintercept = 0, size = 1, colour="#333333") +
 #' theme_ntnu()
 
 theme_ntnu <- function (

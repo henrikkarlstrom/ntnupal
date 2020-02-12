@@ -2,15 +2,15 @@
 #'
 #' @param palette List of palettes to choose from
 #' @param reverse If TRUE, reverses colour direction
-#' @param ... 
+#' @param ... Additional arguments
 #'
 #' @export
 #'
 #' @examples
-#' library(scales)
-#' show_col(ntnu_pal()(10))
-#' 
-#' filled.contour(volcano, color.palette = ntnu_pal(), asp = 1)
+#' \dontrun{
+#'  ntnu_pal()
+#' }
+
 
 ntnu_pal <- function(palette = "main", 
                      reverse = FALSE, ...){
@@ -19,48 +19,65 @@ ntnu_pal <- function(palette = "main",
   
   if(reverse) pal <- rev(pal)
   
-  colorRampPalette(pal, ...)
+  grDevices::colorRampPalette(pal, ...)
   
 }
 
 
 #' Setup colour palette for ggplot2
 #'
-#' @param palette 
-#' @param discrete 
-#' @param reverse 
-#' @param ... 
+#' @param palette Palette to apply
+#' @param discrete Whether the scale is continuous or discrete
+#' @param reverse Whether the palette should be reversed
+#' @param ... Additional arguments
 #'
-#' @return
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' scale_color_ntnu()
+#' }
+
 scale_color_ntnu <- function(palette = "main", 
                              discrete = TRUE, 
                              reverse = FALSE, 
                              ...){
   
-  pal <- ntnu_pal(palette = palette, reverse= reverse)
+  pal <- ntnu_pal(
+    palette = palette,
+    reverse = reverse
+    )
   
   if(discrete){
-    discrete_scale("colour", paste0("ntnu_", palette), palette = pal, ...)
+    ggplot2::discrete_scale(
+      aesthetics = "colour", 
+      scale_name = paste0("ntnu_", palette), 
+      palette = pal, 
+      ...
+      )
   } else {
-    scale_color_gradientn(colours = pal(256), ...)
+    ggplot2::scale_color_gradientn(
+      colours = pal(256), 
+      ...
+      )
   }
   
 }
 
 #' Setup fill palette for ggplot2
 #'
-#' @param palette 
-#' @param discrete 
-#' @param reverse 
-#' @param ... 
+#' @param palette Palette to apply
+#' @param discrete Whether the scale is continuous or discrete
+#' @param reverse Whether the palette should be reversed
+#' @param ... Additional arguments
 #'
-#' @return
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' scale_fill_ntnu()
+#' }
+ 
 scale_fill_ntnu <- function(palette = "main",
                             discrete = TRUE,
                             reverse = FALSE,
@@ -68,8 +85,14 @@ scale_fill_ntnu <- function(palette = "main",
   pal <- ntnu_pal(palette = palette, reverse = reverse)
   
   if(discrete){
-    discrete_scale("fill", paste0("ntnu_", palette), palette = pal, ...)
+    ggplot2::discrete_scale(
+      aesthetics = "fill", 
+      scale_name = paste0("ntnu_", palette), 
+      palette = pal, 
+      ...)
   } else {
-    scale_fill_gradientn(colours = pal(256), ...)
+    ggplot2::scale_fill_gradientn(
+      colours = pal(256), 
+      ...)
   }
 }
