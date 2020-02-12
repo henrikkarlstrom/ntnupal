@@ -11,6 +11,7 @@
 #' show_col(ntnu_pal()(10))
 #' 
 #' filled.contour(volcano, color.palette = ntnu_pal(), asp = 1)
+
 ntnu_pal <- function(palette = "main", 
                      reverse = FALSE, ...){
   
