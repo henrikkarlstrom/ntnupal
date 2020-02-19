@@ -161,7 +161,7 @@ theme_ntnu <- function (
     
     plot.subtitle = ggplot2::element_text(
       size = 22,
-      color = "#bebebe",
+      color = "#808080",
       hjust = 0,
       margin = ggplot2::margin(9,0,9,0)
     ),
