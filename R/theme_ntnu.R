@@ -55,7 +55,7 @@ theme_ntnu <- function (
     axis.line.y = ggplot2::element_blank(), 
     
     axis.text = ggplot2::element_text(
-      size = ggplot2::rel(1.6),
+      size = ggplot2::rel(1.2),
       colour = "#222222"
     ), 
     
@@ -112,7 +112,7 @@ theme_ntnu <- function (
     legend.margin = ggplot2::margin(9,0,9,0), 
     
     legend.text = ggplot2::element_text(
-      size = ggplot2::rel(1.4),
+      size = ggplot2::rel(1.2),
       color = "#222222"
     ), 
     
@@ -161,13 +161,16 @@ theme_ntnu <- function (
     
     plot.subtitle = ggplot2::element_text(
       size = 22,
+      color = "#222222",
+      hjust = 0,
       margin = ggplot2::margin(9,0,9,0)
     ),
     
     plot.title = ggplot2::element_text(
       size = ggplot2::rel(2),
       face = "bold",
-      color = "#222222",
+      color = "#cbcbcb",
+      hjust = 0,
       margin = ggplot2::margin(
         b = half_line * 1.2
       )
@@ -179,7 +182,7 @@ theme_ntnu <- function (
     ), 
     
     strip.text = ggplot2::element_text(
-      size = ggplot2::rel(0.8)
+      size = ggplot2::rel(1)
     ), 
     
     strip.text.x = ggplot2::element_text(
