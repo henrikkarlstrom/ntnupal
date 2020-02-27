@@ -1,5 +1,5 @@
 Package: ntnupal
-Title: Official NTNU palette and theme for graphics
+Title: NTNU theming for graphics and presentations
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Henrik",
