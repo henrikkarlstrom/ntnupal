@@ -1,2 +1,3 @@
 name: ntnu_slides
-create_dir: true
+description: slide deck for NTNU presentations
+create_dir: false
