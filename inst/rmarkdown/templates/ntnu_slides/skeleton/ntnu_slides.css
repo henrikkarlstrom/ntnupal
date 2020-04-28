@@ -2,11 +2,11 @@
 @import url(//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css);
 
 body {
-  font-family: 'Fira Sans','Droid Serif', 'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Microsoft YaHei', 'Songti SC', serif;
+  font-family: 'Open Sans', 'Fira Sans','Droid Serif', 'Palatino Linotype', 'Book Antiqua', 'Palatino', 'Microsoft YaHei', 'Songti SC', serif;
 }
 
 a, a > code {
-  color: #90552a;
+  color: #aad9dd;
   text-decoration: none;
 }
 
@@ -31,11 +31,11 @@ a, a > code {
 }
 
 strong {
-  color: #ef8114;
+  color: #c9d755;
 }
 
 em {
-  color: #6096d0;
+  color: #f7d019;
   font-style: normal;
   font-weight: bold;
 }
@@ -47,15 +47,19 @@ del {
 }
 
 .remark-code {
-  font-family: 'IBM Plex Mono', 'Lucida Console', Monaco, monospace;
+  font-family: 'Lucida Console', Monaco, monospace;
   font-size: 100%;
   background-color: #cfb887;
 }
 
 .remark-inline-code {
-  font-family: 'Fira Sans', 'Lucida Console', Monaco, monospace;
-  font-weight: 400;
-  font-size: 100%;
+  font-family: 'Lucida Console', Monaco, monospace;
+  font-weight: 300;
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #575756;
+  background-color: #c9d755;
+  border-radius: 3px;
 }
 
 .hljs-github .hljs {
@@ -77,22 +81,44 @@ del {
 
 
 .remark-slide-content {
-  color: #253a55;
+  background-color: #575756;
   font-weight: 300;
+  color: #eee5d5;
   padding: 1em 2em 1em 2em
 }
 
+.remark-slide-content h3 {
+  font-size: 30px;
+  line-height: 1.6rem;
+  margin: 4rem 0 0 0;
+}
+
+.remark-slide > .center {
+  background-color: #575756;
+}
+
 h1 {
-  color: #6096d0;
+  color: #f7d019;
   font-weight: 500;
 }
 
 h2 {
   font-weight: 500;
+  color: #f7d019;
+}
+
+h3 {
+  font-weight: 300;
+  color: #eee5d5;
 }
 
 .remark-slide-number {
   font-size: 20px;
+  color: #eee5d5;
+  bottom: 15px;
+  opacity: .8;
+  position: absolute;
+  right: 20px;
 }
 
 .title-slide .remark-slide-number {
@@ -101,22 +127,22 @@ h2 {
 
 .inverse.title-slide {
   background-size: cover;
-  color: #eee5d5;
+  background-color: #28585A;
+  color: #f7d019;
 }
 
 .inverse.title-slide h1  {
-  color: #ef8114;
+  color: #f7d019;
   font-size: 72px;
   text-shadow: none;
   text-align: left;
   vertical-align: bottom;
 }
 .inverse.title-slide h2  {
-  color: #6096d0;
+  color: #f7d019;
   text-shadow: none;
   font-size: 48px;
   text-align: left;
-  font-weight: bold;
 }
 .inverse.title-slide h3  {
   color: #eee5d5;
@@ -136,10 +162,13 @@ h2 {
 
 .inverse {
   background-size: cover;
-  background-color: #3d3732;
+  background-color: #28585A;
   color: #eee5d5;
-  font-weight: bold;
   text-shadow: none;
+}
+
+.inverse .h1 {
+  color: #f7d019;
 }
 
 .inverse-ns {
@@ -150,6 +179,10 @@ h2 {
   font-weight: bold;
 }
 
+.inverse .remark-slide-number{
+  color: #eee5d5;
+}
+
 .left-column {
   color: #777;
   width: 20%;
@@ -157,7 +190,7 @@ h2 {
   float: left;
 }
 
-.left-column h2:last-of-type, .left-column h3:last-child {
+.left-column .h2:last-of-type, .left-column .h3:last-child {
   color: #000;
 }
 
@@ -185,20 +218,24 @@ img, video, iframe {
 }
 
 blockquote {
-  border-left: solid 5px lightgray;
+  border-right: solid 5px #eee5d5;
+  padding: 0.2em 1em 0.2em 0.2em;
+  margin: 0 0 0 0;
+  font-size: 32px;
   padding-left: 1em;
+  text-align: right;
 }
 
 .takeaways {
   padding-top: 80px;
 }
 
-.inverse h1, .inverse h2, .inverse h3  {
+.inverse .h2, .inverse .h3  {
   color: #eee5d5;
   font-weight: 500;
 }
 
-.inverse del {
+.inverse .del {
   color: #7d705a;
 }
 
@@ -210,17 +247,16 @@ img {
   margin-right: auto;
 }
 
-/* list stylings */
 ul {
   font-size: 24px;
   list-style-type: none;
   text-align: left;
   font-weight: 500;
-  padding-top: 40px;
+  padding-top: 0;
 }
 
 ul li {
-  padding-bottom: 40px;
+  padding-bottom: 0;
 }
 
 ol {
@@ -228,7 +264,6 @@ ol {
   list-style: none;
   padding-left: 20px;
   font-size: 45px;
-  font-weight: bold;
   text-align: left;
 }
 
@@ -247,7 +282,7 @@ ol li {
 
 ol li::before {
   content: counter(my-counter);
-  color: #fff;
+  color: #f7d019;
   font-size: 25px;
   font-weight: bold;
   position: absolute;
@@ -256,23 +291,7 @@ ol li::before {
   width: 25px;
   height: 25px;
   top: 0;
-  background: #6096d0;
+  background: #575756;
   border-radius: 50%;
   text-align: center;
-}
-
-/* table stylings */
-table {
-  border-top: 2px solid #111;
-  border-bottom: 2px solid #111;
-  font-size: 1.1rem;
-  padding: 0.3rem;
-}
-
-td {
-  padding: 0.2rem;
-}
-
-th {
-  border-bottom: 1px solid #111;
 }
